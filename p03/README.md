@@ -24,4 +24,4 @@ Hasil akhir yang diharapkan adalah:
 Identitas
 
 NIM: 33132501009
-Nama: Febrianto Santoso
+Nama: Febrianto Santoso R
