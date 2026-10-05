@@ -1,0 +1,57 @@
+data_suhu = [28.5, 30.2, 29.8, 31.0, 27.9]
+
+
+def hitung_rata_rata(data):
+    """Menghitung rata-rata dari sebuah list angka.
+
+    Input : data (list angka)
+    Output: rata-rata (float)
+    """
+
+    total = 0
+
+    for i in range(0, len(data)):
+        total = total + data[i]
+
+    return total / len(data)
+
+
+def cari_tertinggi(data):
+    """Mencari nilai suhu tertinggi dari sebuah list angka.
+
+    Input : data (list angka)
+    Output: nilai suhu tertinggi (float)
+    """
+
+    tertinggi = data[0]
+
+    for nilai in data:
+        if nilai > tertinggi:
+            tertinggi = nilai
+
+    return tertinggi
+
+
+def cek_status(suhu):
+    """Menentukan status suhu berdasarkan nilai suhu.
+
+    Input : suhu (angka)
+    Output: PANAS jika suhu > 30,
+            NORMAL jika suhu 25 sampai 30,
+            DINGIN jika suhu < 25.
+    """
+
+    if suhu > 30:
+        return "PANAS"
+    elif suhu >= 25:
+        return "NORMAL"
+    else:
+        return "DINGIN"
+
+
+if __name__ == "__main__":
+    rata = hitung_rata_rata(data_suhu)
+
+    print("Rata-rata :", rata)
+    print("Tertinggi :", cari_tertinggi(data_suhu))
+    print("Status :", cek_status(rata))
